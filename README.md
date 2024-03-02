@@ -20,6 +20,24 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Tools and utilities
+
+- [npm cli](https://docs.npmjs.com/cli/v10/commands) - CLI
+- [Microsoft Authentication Library](https://learn.microsoft.com/en-us/azure/active-directory-b2c/enable-authentication-react-spa-app) - authenticate via Azure AD account
+- [React Query](https://tanstack.com/query/latest) - server state management
+- [Jotai](https://jotai.org/) - client state management
+- [TailwindCSS](https://tailwindcss.com/) - css
+- [React Hook Form](https://react-hook-form.com/) - form management
+- [zod](https://zod.dev/) - form schema validation
+- [dayjs](https://day.js.org/) - handle Date and Time
+- [jest](https://jestjs.io/) and [react-testing-library](https://testing-library.com/docs/react-testing-library/intro/) for Unit Test (min coverage is 70%)
+- [classix](https://www.npmjs.com/package/classix) - merge css string
+- [axios](https://www.npmjs.com/package/axios) - handle apis
+
+## Conventions
+
+- Please follow ESLint and Prettier rules within the project
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -28,9 +46,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
