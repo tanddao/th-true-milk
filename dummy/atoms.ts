@@ -1,4 +1,4 @@
-import { atomWithStorage } from 'jotai/utils'
+import { atomWithStorage } from "jotai/utils"
 
 export type User = {
   avatar: string
@@ -9,4 +9,5 @@ export type User = {
 }
 
 // will store user detail to local storage (keep atom data after refresh browser)
-export const userDetailAtom = atomWithStorage<User | null>('userDetail', null)
+export const userDetailAtom = atomWithStorage<User | null>("userDetail", null)
+export const currentUserAtom = atomWithStorage<any>("", null)
