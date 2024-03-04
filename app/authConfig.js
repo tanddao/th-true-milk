@@ -12,8 +12,8 @@ import { LogLevel } from "@azure/msal-browser"
  */
 
 // ---------------------------------------------- //
-const clientId = process.env.MSAL_CLIENT_ID || ""
-const tenantName = process.env.MSAL_TENANT_NAME || ""
+const clientId = process.env.NEXT_PUBLIC_MSAL_CLIENT_ID || ""
+const tenantName = process.env.NEXT_PUBLIC_MSAL_TENANT_NAME || ""
 // ---------------------------------------------- //
 
 /**
@@ -28,7 +28,7 @@ export const msalConfig = {
     navigateToLoginRequestUrl: true,
   },
   cache: {
-    cacheLocation: "sessionStorage", // "sessionStorage" or"localStorage"
+    cacheLocation: "localStorage", // "sessionStorage" or"localStorage"
     storeAuthStateInCookie: false,
   },
   system: {

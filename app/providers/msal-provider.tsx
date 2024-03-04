@@ -52,17 +52,20 @@ export default function MSALProvider({
     msalInstance.handleRedirectPromise().then((response) => {
       if (response && response.account) {
         // User is authenticated, you can proceed to  app
-        router.replace("/")
+        return
+        // router.replace("/")
       }
     })
     // Check if the user is already signed in
     const account = msalInstance.getActiveAccount()
     if (account) {
       // User is already signed in, you can proceed to  app
-      router.replace("/")
+      return
+      // router.replace("/")
     } else {
       // If the user is not signed in, initiate the login process
       msalInstance.initialize()
+      router.replace("/")
     }
   }, [router])
 
