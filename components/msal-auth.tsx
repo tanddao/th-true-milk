@@ -3,6 +3,7 @@
 import { loginRequest } from "@/app/authConfig"
 import { currentUserAtom } from "@/dummy/atoms"
 import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from "@azure/msal-react"
+import { Button } from "antd"
 import { useAtom } from "jotai"
 
 export default function MSALAuth({
@@ -40,13 +41,13 @@ export default function MSALAuth({
   return (
     <>
       <UnauthenticatedTemplate>
-        <button onClick={handleLoginPopup}>Sign in using Popup</button>
+        <Button onClick={handleLoginPopup}>Sign in using Popup</Button>
       </UnauthenticatedTemplate>
 
       <AuthenticatedTemplate>
-        <button onClick={handleLogoutPopup}>Sign out using Popup</button>
+        <Button onClick={handleLogoutPopup}>Sign out using Popup</Button>
         <br />
-        <button onClick={handleLogoutRedirect}>Sign out using Redirect</button>
+        <Button onClick={handleLogoutRedirect}>Sign out using Redirect</Button>
         <br />
         {currentUser && (
           <p>

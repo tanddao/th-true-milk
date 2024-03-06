@@ -1,11 +1,12 @@
-'use client'
+"use client"
 
-import { useQueryUsers } from './useQueryUsers'
-import { User, userDetailAtom } from '@/dummy/atoms'
+import { Button } from "antd"
+import { useQueryUsers } from "./useQueryUsers"
+import { User, userDetailAtom } from "@/dummy/atoms"
 
-import cx from 'classix'
-import { useSetAtom } from 'jotai'
-import { useRouter } from 'next/navigation'
+import cx from "classix"
+import { useSetAtom } from "jotai"
+import { useRouter } from "next/navigation"
 
 export default function SampleComponent() {
   const { refetch, data, isFetching } = useQueryUsers()
@@ -22,21 +23,21 @@ export default function SampleComponent() {
   }
 
   return (
-    <div className="flex justify-center flex-col space-y-4">
+    <div className='flex justify-center flex-col space-y-4'>
       <div>Sample Component - Example code with react-query and jotai atom</div>
-      <p>{isFetching ? 'Fetching users ...' : ''}</p>
-      <button
-        className={cx('border p-2', isFetching ? 'opacity-50 cursor-not-allowed' : 'opacity-100')}
+      <p>{isFetching ? "Fetching users ..." : ""}</p>
+      <Button
+        className={cx("border p-2", isFetching ? "opacity-50 cursor-not-allowed" : "opacity-100")}
         onClick={fetchDummyData}
       >
         fetch users
-      </button>
+      </Button>
       <ul>
         {data?.data.data.map((user: User) => (
           <li key={user.id}>
-            <button onClick={() => setActiveUser(user)}>
+            <Button onClick={() => setActiveUser(user)}>
               {user.first_name} {user.last_name}
-            </button>
+            </Button>
           </li>
         ))}
       </ul>

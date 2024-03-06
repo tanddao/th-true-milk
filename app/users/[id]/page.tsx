@@ -1,6 +1,7 @@
 "use client"
 
 import { userDetailAtom } from "@/dummy/atoms"
+import { Button } from "antd"
 import { useAtomValue } from "jotai"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
@@ -18,9 +19,9 @@ export default function UserDetails({ params }: Readonly<{ params: { id: string 
       {userDetails?.avatar && (
         <Image src={userDetails?.avatar} alt={userDetails?.first_name} width={250} height={250} />
       )}
-      <button className='border p-4' onClick={router.back}>
+      <Button className='border p-4' onClick={router.back}>
         back to users list
-      </button>
+      </Button>
     </div>
   )
 }

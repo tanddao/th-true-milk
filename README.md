@@ -23,6 +23,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ## Tools and utilities
 
 - [npm cli](https://docs.npmjs.com/cli/v10/commands) - CLI
+- [Ant Design](https://ant.design/docs/react/introduce) - UI Library
 - [Microsoft Authentication Library](https://learn.microsoft.com/en-us/azure/active-directory-b2c/enable-authentication-react-spa-app) - authenticate via Azure AD account
 - [React Query](https://tanstack.com/query/latest) - server state management
 - [Jotai](https://jotai.org/) - client state management
@@ -33,6 +34,9 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - [jest](https://jestjs.io/) and [react-testing-library](https://testing-library.com/docs/react-testing-library/intro/) for Unit Test (min coverage is 70%)
 - [classix](https://www.npmjs.com/package/classix) - merge css string
 - [axios](https://www.npmjs.com/package/axios) - handle apis
+
+- Rich text editor - TBD, could be [Qill](https://quilljs.com/) or [tiptap](https://github.com/ueberdosis/tiptap)
+- PDF Viewer - TBD bases on requirement
 
 ## Conventions
 
