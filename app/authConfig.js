@@ -14,6 +14,7 @@ import { LogLevel } from "@azure/msal-browser"
 // ---------------------------------------------- //
 const clientId = process.env.NEXT_PUBLIC_MSAL_CLIENT_ID || ""
 const tenantName = process.env.NEXT_PUBLIC_MSAL_TENANT_NAME || ""
+const activeFlow = process.env.NEXT_PUBLIC_MSAL_ACTIVE_FLOW || ""
 // ---------------------------------------------- //
 
 /**
@@ -22,8 +23,8 @@ const tenantName = process.env.NEXT_PUBLIC_MSAL_TENANT_NAME || ""
 export const msalConfig = {
   auth: {
     clientId: clientId,
-    authority: `https://login.microsoftonline.com/${tenantName}`,
-    redirectUri: "http://localhost:3000/",
+    authority: `https://${tenantName}.b2clogin.com/${tenantName}.onmicrosoft.com/${activeFlow}`,
+    redirectUri: "/",
     postLogoutRedirectUri: "/",
     navigateToLoginRequestUrl: true,
   },
